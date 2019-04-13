@@ -12,10 +12,18 @@ header {
   margin: 5px;
 }
 
-.container header-image {
-  height: 400px;
-  width: auto;
+footer {
+  text-align: center;
+
 }
+footer ul {
+list-style-type: none;
+}
+
+// .container header-image {
+//   height: 400px;
+//   width: auto;
+// }
 
 // .jumbotron {
 //   text-align: center;
