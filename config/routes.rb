@@ -10,4 +10,10 @@ get 'linkedin', to: 'services#linkedin'
 get 'instagram', to: 'services#instagram'
 get 'youtube', to: 'services#youtube'
 
+get 'admin_profile', to: 'admin#admin_profile'
+get 'client_base', to: 'admin#client_base'
+
+get 'client_profile', to: 'client#client_profile'
+
+
 end
