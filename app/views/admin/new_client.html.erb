@@ -1,0 +1,46 @@
+<center>
+<p> </p>
+<h1>New client</h1>
+<hr>
+<%= form_for @client, url: client_base_path do |f| %>
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br/><%= f.label :server %>
+    <%= f.text_field :server %>
+    <br/><%= f.label :contactname %>
+    <%= f.text_field :contactname %>
+    <br/><%= f.label :contactemail %>
+    <%= f.text_field :contactemail %>
+    <br/><%= f.label :package %>
+    <%= f.text_field :package %>
+    <br/><%= f.label :source %>
+    <%= f.text_field :source %>
+    <br/><%= f.label :paidsam %>
+    <%= f.text_field :paidsam %>
+    <br/><%= f.label :socialurl %>
+    <%= f.text_field :socialurl %>
+    <br/><%= f.label :password %>
+    <%= f.text_field :password %>
+    <br/><%= f.label :price %>
+    <%= f.text_field :price %>
+    <br/><%= f.label :fbinstarepost %>
+    <%= f.text_field :fbinstarepost %>
+    <br/><%= f.label :closeio %>
+    <%= f.text_field :closeio %>
+    <br/><%= f.label :proxy %>
+    <%= f.text_field :proxy %>
+    <br/><%= f.label :datesold %>
+    <%= f.text_field :datesold %>
+    <br/><%= f.label :datestarted %>
+    <%= f.text_field :datestarted %>
+    <br/><%= f.label :startingfollowing %>
+    <%= f.text_field :startingfollowing %>
+
+  </p>
+  <p>
+    <%= f.submit "Add the client" %>
+  </p>
+<% end %>
+<p2> And back to your <%= link_to "profile", admin_profile_path %></p2>
+</center>

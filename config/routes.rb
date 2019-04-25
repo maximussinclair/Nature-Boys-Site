@@ -12,6 +12,8 @@ get 'youtube', to: 'services#youtube'
 
 get 'admin_profile', to: 'admin#admin_profile'
 get 'client_base', to: 'admin#client_base'
+get 'edit_client', to: 'admin#edit_client'
+get 'new_client', to: 'admin#new_client'
 
 get 'client_profile', to: 'client#client_profile'
 

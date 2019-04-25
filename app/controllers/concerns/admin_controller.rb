@@ -8,4 +8,16 @@ class AdminController < ApplicationController
 
   end
 
+  def edit_client
+
+  end
+
+  def new_client
+    @client = Client.new
+  end
+
+  def create
+    render plain: params[:client].inspect
+  end
+
 end
