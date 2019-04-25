@@ -1,18 +1,14 @@
-class AdminController < ApplicationController
+class Admin::ClientsController < AdminController
 
   def admin_profile
 
   end
 
-  def client_base
+  def edit
 
   end
 
-  def edit_client
-
-  end
-
-  def new_client
+  def new
     @client = Client.new
   end
 

@@ -2,7 +2,7 @@
 <p> </p>
 <h1>New client</h1>
 <hr>
-<%= form_for @client, url: client_base_path do |f| %>
+<%= form_for @client do |f| %>
   <p>
     <%= f.label :username %>
     <%= f.text_field :username %>
