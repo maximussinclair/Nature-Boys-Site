@@ -1,15 +1,23 @@
 
 @import "bootstrap";
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 header {
   background-color: #f8f9fa
 
 }
 
 .logo img {
-    height: 50px;
+    height: 40px;
   width: auto;
   margin: 5px;
+}
+
+.nav-item {
+  font-size: 18px;
 }
 
 footer {
@@ -23,8 +31,7 @@ list-style-type: none;
 .homepage-text {
   text-align: center;
   margin: 50px;
-  font-size: 24px;
-  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -35,9 +42,14 @@ list-style-type: none;
   background-size: cover;
 }
 
+.product-title-text h1 {
+  font-weight: bolder;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
 .display-4 {
   font-size: 50px;
-  font-family: 'Nunito', sans-serif;
   font-weight: bolder;
   color: white;
   margin-top: 30px;
@@ -46,7 +58,6 @@ list-style-type: none;
 
 .display-5 {
   font-size: 40px;
-  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   color: white;
   margin-top: 30px;
@@ -75,7 +86,7 @@ list-style-type: none;
 
 .chat-cta {
   text-align: center;
-  margin: 30px;
+  margin: 50px;
 }
 
 .page-break {
@@ -92,7 +103,6 @@ list-style-type: none;
 }
 
 .linkedin {
-  font-family: 'Nunito', sans-serif;
   height: 250px;
   width: 400px;
   float: left;
@@ -101,7 +111,6 @@ list-style-type: none;
 }
 
 .youtube {
-  font-family: 'Nunito', sans-serif;
   height: 250px;
   width: 400px;
   float: right;
@@ -110,9 +119,9 @@ list-style-type: none;
 }
 
 .homepage-ec-journalist {
-  font-family: 'Nunito', sans-serif;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 80px;
+  font-size: 18px;
   text-align: center;
 }
 
