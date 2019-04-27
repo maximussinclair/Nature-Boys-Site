@@ -9,7 +9,7 @@ header {
   background-color: #f8f9fa
 
 }
-
+//navigation CSS
 .logo img {
     height: 40px;
   width: auto;
@@ -19,7 +19,7 @@ header {
 .nav-item {
   font-size: 18px;
 }
-
+//footer CSS
 footer {
   text-align: center;
 
@@ -28,6 +28,7 @@ footer ul {
 list-style-type: none;
 }
 
+//Homepage CSS
 .homepage-text {
   text-align: center;
   margin: 50px;
@@ -37,6 +38,7 @@ list-style-type: none;
 
 .jumbotron {
   background-image: url("junglegirl.jpg");
+  background-position: center;
   height: 360px;
   width: auto;
   background-size: cover;
@@ -89,14 +91,6 @@ list-style-type: none;
   margin: 50px;
 }
 
-.page-break {
-  background-image: url("junglegirlarmsup.jpg");
-  background-size: cover;
-  height: 200px;
-  background-position: center;
-  width: auto;
-}
-
 .linkedin-and-youtube {
   margin: auto;
   height: 350px;
@@ -125,18 +119,23 @@ list-style-type: none;
   text-align: center;
 }
 
-// .container header-image {
-//   height: 400px;
-//   width: auto;
-// }
+//general use CSS
+.page-break {
+  background-image: url("junglegirlarmsup.jpg");
+  background-size: cover;
+  height: 100px;
+  background-position: center;
+  width: auto;
+}
 
-// .jumbotron {
-//   text-align: center;
-// }
+.social-channel-text {
+  text-align: center;
+  margin: 50px;
+  font-size: 20px;
+  font-weight: 400;
+}
 
-// .navbar-brand {
-//   font-size: 50px;
-//   display: inline-block;
-//   float: none;
-//   vertical-align: top;
-// }
+//instagram
+.instagram-explainer {
+  text-align: center;
+}
