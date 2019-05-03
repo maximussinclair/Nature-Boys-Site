@@ -12,6 +12,10 @@
 
   <body>
 
+    <% unless action_name == "home" %>
+   <%= render 'shared/logo' %>
+   <% end %>
+
     <%= render 'shared/nav' %>
 
       <%= yield %>

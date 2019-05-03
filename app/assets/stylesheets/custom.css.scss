@@ -19,6 +19,30 @@ header {
 .nav-item {
   font-size: 18px;
 }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    text-align: center;
+}
+
+#emailus {
+  color: white;
+  margin: auto 0px auto 20px;
+  text-align: center;
+}
+
+#emailus p {
+  font-size: 16px;
+  margin: auto;
+}
+
+#clientsignin {
+  color: white;
+  margin: auto 20px auto 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
 //footer CSS
 footer {
   text-align: center;
@@ -47,6 +71,10 @@ list-style-type: none;
   height: 450px;
   width: auto;
   background-size: cover;
+}
+
+.header-image h2 {
+  margin-top: 110px;
 }
 
 //.product-title-text h1 {
