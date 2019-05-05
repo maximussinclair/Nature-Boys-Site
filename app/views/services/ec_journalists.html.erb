@@ -4,24 +4,30 @@
   </div>
 </div>
 <div class="nb-and-ec-logo">
-<h1 class="display-3"><%= image_tag("nbandeclogos.png") %></h1>
+<h1 class="display-3"><%= image_tag("EC_Journalist.png") %></h1>
 </div>
 
 <div class="social-channel-text row">
   <div class="container">
     <p1>Eco Companion is on a mission to save natural world and the Eco Companion Journalists
-      is a community of content creators focused on helping to inspire more people to fall
+      are a community of content creators focused on helping to inspire more people to fall
       in love with the natural world!
       <br>
-      <br><%= link_to image_tag("EC_Journalist.png"), "https://www.instagram.com/ec_journalists/" %>
+      <br><%= link_to image_tag("nbandeclogos.png"), "https://www.instagram.com/ec_journalists/" %>
       <br>
       <br>This is right up the Nature Boys street! So we’re proud to have partnered up to support that growth!
       <br>
-      <br>Whether you’re a content creator early on in your journey or already an award winner global power house - find out more about the group and apply below...
+      <br>Whether you’re a content creator early on in your journey or already
+      an award winner global power house - find out more about the group and apply for membership.
+      <br>
+      <br>Just get in touch by emailing kieran@wearethenatureboys.com with who you are,
+      your social pages and why it is you're interested in being an EC Journalist.
+       <br>
+       <br> or click the link below...
     </p1>
   </div>
 </div>
 
-<div class="ecj-cta">
-  <h2><%=link_to 'Click to apply!', speak_to_us_path, class: "btn btn-dark btn-lg btn-xlarge" %></h2>
+<div class="chat-cta">
+  <h2><%=mail_to "kieran@wearethenatureboys.com", "Email us", :subject => "NB ECJ Enquiry", class: "btn btn-dark btn-lg btn-xlarge" %></h2>
 </div>
