@@ -54,6 +54,7 @@ group :development do
 end
 group :production do
     gem 'pg'
+    gem 'rails_12factor', group: :production
 end
 group :test do
   # Adds support for Capybara system testing and selenium driver
