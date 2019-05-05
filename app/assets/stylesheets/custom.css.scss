@@ -77,6 +77,12 @@ list-style-type: none;
   margin-top: 110px;
 }
 
+.homepage-ec-journalist img {
+  height: 200px;
+  width: auto;
+  margin: 0px auto 25px auto;
+}
+
 //.product-title-text h1 {
 //  font-weight: bolder;
 //  margin-top: 40px;
@@ -135,8 +141,14 @@ list-style-type: none;
 }
 
 .linkedin-and-youtube {
-  margin: auto;
-  height: 350px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: 400;
+  height: 450px;
+
 }
 
 .linkedin {
@@ -219,15 +231,39 @@ list-style-type: none;
   margin-right: auto;
 }
 
-//linkedin
-
-.linkedin-and-youtube {
+.pods-and-comments {
   margin-top: auto;
   margin-right: auto;
   margin-bottom: auto;
   margin-left: auto;
-
+  font-size: 20px;
+  font-weight: 400;
+  height: 450px;
 }
+
+.pods-and-comments p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.pods {
+  height: 250px;
+  width: 400px;
+  float: left;
+  text-align: center;
+  margin: 40px;
+}
+
+.comments {
+  height: 250px;
+  width: 400px;
+  float: right;
+  text-align: center;
+  margin: 40px;
+}
+
+//linkedin
+
 
 .linkedin-paths {
   text-align: center;
@@ -260,6 +296,11 @@ list-style-type: none;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.social-channel-text img {
+  height: 300px;
+  width: auto;
 }
 
 //About us

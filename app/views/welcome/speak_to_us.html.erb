@@ -10,13 +10,17 @@
 <div class="social-channel-text container">
     <p1> Interested in our support with Instagram, Linkedin or Youtube?
       <br>
-      <br>Just get in touch with the link below and one of the boys will be in touch! ✌🏻
+      <br>Just get in touch by emailing kieran@wearethenatureboys.com with who you are
+       and the social account
+       <br>you're interested in getting our help with. ✌🏻
+       <br>
+       <br> or click the link below...
     </p1>
   </div>
 </div>
 
 <div class="chat-cta">
-  <h2><%=link_to 'Click to chat!', speak_to_us_path, class: "btn btn-dark btn-lg btn-xlarge" %></h2>
+  <h2><%=mail_to "kieran@wearethenatureboys.com", "Email us", :subject => "NB Enquiry", class: "btn btn-dark btn-lg btn-xlarge" %></h2>
 </div>
 
 <div class="page-break-text row">
