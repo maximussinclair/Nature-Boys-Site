@@ -1,34 +1,54 @@
-# Puma can serve each request in a thread from an internal thread pool.
-# The `threads` method setting takes two numbers: a minimum and maximum.
-# Any libraries that use thread pools should be configured to match
-# the maximum value specified for Puma. Default is set to 5 threads for minimum
-# and maximum; this matches the default thread size of Active Record.
-#
-threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
-threads threads_count, threads_count
+RailsRoot      = Dir.pwd
+BindPort       = (ENV['PORT'] || '3000').to_i
+Production     = if ENV['RAILS_ENV'] == 'production' then true else false end
+Staging        = if ENV['RAILS_ENV'] == 'staging' then true else false end
 
-# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-#
-port        ENV.fetch("PORT") { 3000 }
+Workers        = (ENV['WEB_CONCURRENCY'] || '3').to_i
+Threads        = (ENV['THREADS'] || '5').to_i
+WorkerMaxMem   = (ENV['WORKER_MAX_MEM'] || '512').to_i
+SystemMem      = (ENV['SYSTEM_MEM'] || '1024').to_i
 
-# Specifies the `environment` that Puma will run in.
-#
+DaemonPriority = (ENV['DAEMON_PRIORITY'] || '-5').to_i
+
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-# Specifies the number of `workers` to boot in clustered mode.
-# Workers are forked webserver processes. If using threads and workers together
-# the concurrency of the application would be max `threads` * `workers`.
-# Workers do not work on JRuby or Windows (both of which do not support
-# processes).
-#
-# workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+app_dir = File.expand_path("../..", __FILE__)
+shared_dir = "#{app_dir}/shared"
 
-# Use the `preload_app!` method when specifying a `workers` number.
-# This directive tells Puma to first boot the application and load code
-# before forking the application. This takes advantage of Copy On Write
-# process behavior so workers use less memory.
-#
-# preload_app!
+directory       RailsRoot
+if Production || Staging
+  bind            "unix://#{shared_dir}/run/puma.sock"
+else
+  port            BindPort
+  bind            "tcp://0.0.0.0:#{BindPort}"
+  worker_timeout  1000
+end
 
-# Allow puma to be restarted by `rails restart` command.
+# Logging
+stdout_redirect "#{shared_dir}/log/puma-nature.stdout.log", "#{shared_dir}/log/puma-nature.stderr.log", true if Production || Staging
+
+# Set master PID and state locations
+pidfile "#{shared_dir}/pids/puma.pid"
+
+workers Workers
+threads 1,Threads
+
+preload_app!
+
+before_fork do
+  begin
+    require 'puma_worker_killer'
+    PumaWorkerKiller.config do |config|
+      config.ram           = SystemMem # mb
+      config.frequency     = 20   # seconds
+      config.percent_usage = 0.95
+      config.rolling_restart_frequency = 12 * 3600 # 12 hours
+      config.reaper_status_logs = false
+    end
+    PumaWorkerKiller.start
+  rescue LoadError
+    puts "Can't start puma in cluster mode. Check puma worker killer"
+  end
+end
+
 plugin :tmp_restart
